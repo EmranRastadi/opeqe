@@ -1,0 +1,479 @@
+body {
+    color: #333333;
+}
+
+h1 {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.z-depth-1,
+nav,
+.card-panel,
+.card,
+.toast,
+.btn,
+.btn-large,
+.btn-small,
+.btn-floating,
+.dropdown-content,
+.collapsible,
+.sidenav {
+    box-shadow: none !important;
+}
+
+nav ul a {
+    color: #000000 !important;
+}
+
+ul.top_menu li {
+    margin-top: 3%;
+}
+
+ul.top_menu li a.rol {
+    margin: 5px;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    text-align: center;
+    line-height: 1.7;
+    padding: 5px;
+    cursor: pointer;
+}
+
+ul.top_menu li a.iconss {
+    line-height: 1.7;
+    padding: 5px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: -3px;
+}
+
+ul.top_menu li a.iconss:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+}
+
+ul.top_menu li a.rol:hover {
+    border-radius: 15px;
+    background: #000;
+    color: #fff !important;
+}
+
+ul.top_menu li a.border {
+    margin: 5px;
+    text-align: center;
+    line-height: 1.7;
+    padding: 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 15px;
+    height: 36px;
+    font-size: 13px;
+}
+
+ul.top_menu li a.border:hover {
+    background: none !important;
+}
+
+ul.top_menu li a.fulls {
+    margin: 5px;
+    text-align: center;
+    line-height: 1.7;
+    padding: 5px;
+    background: #000;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fed200 !important;
+    font-size: 12px;
+    height: 36px;
+    line-height: 1.9;
+}
+
+.top_page {
+    width: 100%;
+    height: 435px;
+    position: relative;
+    background-color: #fed200;
+    background-attachment: fixed;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider_product {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mini_move {
+    width: 50px;
+    height: 2px;
+    background: #333333;
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+}
+
+.top_slider {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.product_cart {
+    width: 100px;
+    height: 100%;
+}
+
+.product_box {
+    width: 350px;
+    height: 100%;
+    float: left;
+    margin-right: 20px;
+}
+
+.main_slider {
+    min-width: 100%;
+    list-style: inline-block;
+    margin-top: 5px;
+    position: absolute;
+    height: 300px;
+}
+
+.img_pro {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    float: right;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.img_pro img {
+    width: 100%;
+    height: 100%;
+}
+
+#happy_hour {
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.pro_content {
+    float: right;
+    width: 100%;
+    height: 20%;
+    margin-top: 5px;
+}
+
+span.badge {
+    color: #333333 !important;
+    border-radius: 5px;
+    background-color: #ccc;
+    float: left !important;
+}
+
+#free_pick {
+    float: right;
+    color: #026764;
+    cursor: pointer;
+}
+
+.flickity-prev-next-button {
+    background: #006064 !important;
+}
+
+.flickity-prev-next-button .arrow {
+    color: #fff !important;
+}
+
+@keyframes button_act_trans {
+    0% {
+        width: 0px;
+        height: 0px;
+        right: 40px
+    }
+    25% {
+        width: 50px;
+        height: 50px;
+        right: 10px
+    }
+    50% {
+        width: 60px;
+        height: 60px;
+        right: 0px
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        right: 10px
+    }
+}
+
+.prev_slide {
+    width: 50px;
+    height: 50px;
+    background-color: #006064;
+    border-radius: 100%;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0;
+    color: #fff;
+    cursor: pointer;
+    z-index: 99;
+    text-align: center;
+    animation: button_act_trans_l 0.3s;
+}
+
+@keyframes button_act_trans_l {
+    0% {
+        width: 0px;
+        height: 0px;
+        left: 40px
+    }
+    25% {
+        width: 50px;
+        height: 50px;
+        left: 10px
+    }
+    50% {
+        width: 60px;
+        height: 60px;
+        left: 0px
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        left: 10px
+    }
+}
+
+
+/****************************************************/
+
+.carousel {
+    background: black;
+}
+
+.carousel-cell {
+    width: 70%;
+    height: 200px;
+    /* flex-box, center image in cell */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.carousel-cell img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    /* dim unselected */
+    opacity: 0.7;
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+    transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+
+
+/* brighten selected image */
+
+.carousel-cell.is-selected img {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: none;
+    filter: none;
+}
+
+@media screen and ( min-width: 768px) {
+    .carousel-cell {
+        height: 400px;
+    }
+}
+
+@media screen and ( min-width: 960px) {
+    .carousel-cell {
+        width: 60%;
+    }
+}
+
+
+/* buttons, no circle */
+
+.flickity-prev-next-button {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    opacity: 0.6;
+}
+
+.flickity-prev-next-button:hover {
+    background: transparent;
+    opacity: 1;
+}
+
+
+/* arrow color */
+
+.flickity-prev-next-button .arrow {
+    fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+    color: white;
+}
+
+
+/* closer to edge */
+
+.flickity-prev-next-button.previous {
+    left: 0;
+}
+
+.flickity-prev-next-button.next {
+    right: 0;
+}
+
+
+/* hide disabled button */
+
+.flickity-prev-next-button:disabled {
+    display: none;
+}
+
+
+/******************************************* */
+
+.main_svg_box {
+    width: 100%;
+    height: 110px;
+    position: relative;
+}
+
+.svg_img {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+}
+
+#top_board {
+    width: 100%;
+    height: 55px;
+    float: right;
+}
+
+#over_box {
+    width: 100%;
+    background: #ffffff;
+    height: 75px;
+    position: absolute;
+    top: 0px;
+}
+
+#bottom_board {
+    width: 100%;
+    height: 55px;
+    float: right;
+    background: #000;
+}
+
+ul.mini_menu {
+    margin: 0px;
+}
+
+ul.mini_menu li {
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+}
+
+ul.mini_menu li:hover {
+    color: #00b8d4;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #464646;
+    margin-bottom: 45px !important;
+}
+
+.footer_menu_top {
+    width: 100%;
+    height: 50px;
+    border-bottom: .5px solid #464646;
+}
+
+.footer_menu_top ul li {
+    float: right;
+    margin-left: 10px;
+    height: 49px;
+    border-bottom: 2px solid #000000;
+    line-height: 2.6;
+    transition: .5s all ease-in-out;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+}
+
+.footer_menu_top ul li:hover {
+    color: #00b8d4;
+    border-bottom: 2px solid #00b8d4;
+    cursor: pointer;
+}
+
+#icon_motion {
+    margin-top: 30px;
+}
+
+.brand-logo {
+    width: 110px;
+}
+
+#icon_motion span {
+    float: right;
+    margin-left: 15px;
+}
+
+.page-footer {
+    position: relative;
+    background: #000000 !important;
+    margin-bottom: -20px !important;
+}
+
+#icon_motion span img {
+    width: 20px;
+}
+.headers{
+    background: #ffffff !important;
+    box-shadow: 0 0px 6px 3px rgba(0,0,0,0.6) !important;
+}

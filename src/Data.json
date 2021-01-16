@@ -1,0 +1,89 @@
+[
+	{
+		"name" : "Egg Burger with Truffle Mayo" ,
+		"location" : "AmericanMain CourseLunch & Dinner" ,
+	    "time" : "4-6 min" ,
+	    "price" : "1094" ,
+		"restName" : "Omelette",
+	    "type" : "Sandwich",
+	    "img" : "img/3.jpg",
+		"discount" :  "70"
+	},
+	{
+		"name" : "hot dog" ,
+		"location" : "AmericanMain CourseLunch " ,
+	 	"time" : "8-9 min" ,
+		"restName" : "Cinnamon roll pancake",
+	 	"price" : "5498" ,
+	 	"type" : "Sandwich",
+	 	"img" : "img/11.jpg"},
+
+
+	{
+		"name" : "Egg Burger  Mayo" ,
+		"location" : "AmericanMain CourseLunch & Dinner" ,
+		"time" : "4-6 min" ,
+		"price" : "5500" ,
+		"restName" : "Omelette",
+		"type" : "Sandwich",
+		"img" : "img/11.jpg",
+		"discount" :  "35"
+	},
+	{
+		"name" : "sadanwich berger" ,
+		"location" : "AmericanMain " ,
+		"time" : "7-9 min" ,
+		"restName" : "Cinnamon pancake",
+		"price" : "5500" ,
+		"type" : "Sandwich",
+		"img" : "img/3.jpg"},
+
+
+
+	
+	{
+		"name" : "Cinnamon Roll Pancake" ,
+		"location" : "AmericanMain CourseLunch & Dinner" ,
+		"time" : "7-9 min" ,
+		"price" : "3100" ,
+		"type" : "Breakfast",
+		"restName" : "Cinnamon roll pancake",
+		"img" : "img/12.jpg"},
+	{
+		"name" : "Blueberry Pancake Breakfast" ,
+		"location" : "Eng london " ,
+		"time" : "10-12 min" ,
+		"restName" : "Omelette",
+		"type" : "Breakfast",
+		"price" : "3000" ,
+		"img" : "img/3.jpg"
+	},
+	{
+		"name" : "pankek Breakfast" ,
+		"location" : "Eng london " ,
+		"time" : "10-12 min" ,
+		"restName" : "Omelette",
+		"type" : "Breakfast",
+		"price" : "3000" ,
+		"img" : "img/11.jpg"
+	}
+,
+	{
+		"name" : "pankek " ,
+		"location" : "Eng london " ,
+		"time" : "10-12 min" ,
+		"type" : "Breakfast",
+		"price" : "5000" ,
+		"discount" : "40",
+		"restName" : "Omelette",
+		"img" : "img/11.jpg"
+	},{
+		"name" : "Breakfast" ,
+		"location" : "Eng london " ,
+		"time" : "10-12 min" ,
+		"type" : "Breakfast",
+	"restName" : "Pancake",
+		"price" : "1050" ,
+		"img" : "img/11.jpg"
+	}
+]

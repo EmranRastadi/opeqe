@@ -1,0 +1,13 @@
+const Data ={
+	Sandwich : {
+		"1" : {name : "Egg Burger with Truffle Mayo" , location : "AmericanMain CourseLunch & Dinner" , time : "4-6 min" , price : "1094" , img : 'img/3.jpg'},
+		"2" : {name : "hot dog" , location : "AmericanMain CourseLunch " , time : "8-9 min" , price : "5498" , img : 'img/11.jpg'},
+	},
+	Breakfast : {
+		"1" : {name : "Cinnamon Roll Pancake" , location : "AmericanMain CourseLunch & Dinner" , time : "7-9 min" , price : "3100" , img : 'img/12.jpg'},
+		"2" : {name : "Blueberry Pancake Breakfast" , location : "Eng london " , time : "10-12 min" , price : "3000" , img : 'img/3.jpg'},
+	
+	}
+}
+
+export default data;
