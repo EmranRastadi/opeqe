@@ -451,8 +451,8 @@ class App extends Component {
                                 <div
                                     className="col s12 l6"
                                     style={{marginTop: "25px"}}>
-                                    <span> & copy; 2021 OPEQE INC </span> &nbsp;&nbsp; | &nbsp;&nbsp; <span> & copy; Terms & Conditions </span> &nbsp;&nbsp; | &nbsp;&nbsp;
-                                    <span> & copy; Privacy Policy </span>
+                                    <span> &copy; 2021 OPEQE INC </span> &nbsp;&nbsp; | &nbsp;&nbsp; <span>  Terms & Conditions </span> &nbsp;&nbsp; | &nbsp;&nbsp;
+                                    <span> Privacy Policy </span>
                                 </div>
                                 <div
                                     className="col s12 l6"
