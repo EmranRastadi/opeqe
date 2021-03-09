@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Chat - چت
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Connect to Server**
 
-## Available Scripts
+  - `const socket = io.connect('http://ip:7000')`
 
-In the project directory, you can run:
+- **Be On ‘connected’ key to receive confirmation**
 
-### `yarn start`
+  - `socket.on(’connected’, () => console.log(’Connected Succesfully’)`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - روی کلید اشاره شده به گوش باشید تا تصدیق اتصال را دریافت کنید
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - **to start a chat with someone we need a unique value for both of users
+    such as their id’s. this a sample data:**
 
-### `yarn test`
+  ```
+      data = {
+          thisUserId: '123456789',
+          thisUserName: 'ant',
+          otherUserId: '987654321',
+          otherUserName: 'Alii',
+      }
+  ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- to start chat send a ‘join’ emit with mentioned data
 
-### `yarn build`
+  - `socket.emit(’join’, data, joinResponse => console.log(’Server Response’, joinResponse))`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    - if ‘join’ was successful you will receive `true` else `false`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - **to send message emit the following data with this key =\> ‘message’**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```
+         data: {
+              sender: data.thisUserId // Current User,
+              receiver: data.otherUserId // Other User,
+              content: 'Your Text',
+              type: 'text' // can be 'text', 'image', 'video', 'audio'
+         }
+  ```
 
-### `yarn eject`
+  - `socket.emit(’message’, data, messageResponse => console.log(’Server Response’, messageResponse))`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    - So on you need to Be On, on ‘message’ to receive new messages
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - After the chat you need to leave the room. basically when you want to
+    switch chat to another user or anything that could end up the chat with
+    current user you need to emit the ‘leave’ key with data as join
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    `socket.emit(’leave’, data, leaveResponse => console.log(’Server Response’, leaveResponse ))`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - **for is typing Feature send an emit with ‘is-typing’ key with following
+    data on every keyPress event.**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    - `socket.emit(’is-typing’, { name: ‘ant’ }) `
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+  - and Be On, on ‘is-typing’
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - socket.on(’is-typing’, (data) =\> console.log(data.name+’ is
+    typing...’))
